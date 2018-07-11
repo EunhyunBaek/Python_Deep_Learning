@@ -15,6 +15,6 @@ class HYUN_Slice():
         y2[1] = 100
         print("change 100 in y2[1]  : ", y2)
         print("y1                   : ", y1)
-Hyun=HYUN_Slice
-Hyun.List_Slice(0)
-Hyun.Numpy_Slice(0)
+hyun=HYUN_Slice
+hyun.List_Slice(0)
+hyun.Numpy_Slice(0)

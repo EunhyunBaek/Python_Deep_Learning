@@ -24,7 +24,7 @@ class Hyun_Numpy:
         x1 = np.ones((3, 2))
         print(x1)
 
-Hyun=Hyun_Numpy
-Hyun.Numpy_Array(0)
-Hyun.Numpy_Array_Zero(0)
-Hyun.Numpy_Array_Ones(0)
+hyun=Hyun_Numpy
+hyun.Numpy_Array(0)
+hyun.Numpy_Array_Zero(0)
+hyun.Numpy_Array_Ones(0)

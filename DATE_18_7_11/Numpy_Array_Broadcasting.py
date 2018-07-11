@@ -16,6 +16,6 @@ class HYUN_Numpy_BroadCasting:
         print("x2 shape:", x2.shape)
         print('x2 : ',x2)
 
-Hyun=HYUN_Numpy_BroadCasting
-Hyun.HYUN_Numpy_BroadCasting_Procession_TO_Intiger(0)
-Hyun.HYUN_Numpy_BroadCasting_Procession_SUM_Procession(0)
+hyun=HYUN_Numpy_BroadCasting
+hyun.HYUN_Numpy_BroadCasting_Procession_TO_Intiger(0)
+hyun.HYUN_Numpy_BroadCasting_Procession_SUM_Procession(0)

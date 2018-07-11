@@ -22,9 +22,9 @@ class HYUN_Numpy_Array_Calculate:
         x1 = HYUN_Numpy_Array_Calculate.x / HYUN_Numpy_Array_Calculate.x
         print(x1)
 
-Hyun=HYUN_Numpy_Array_Calculate
+hyun=HYUN_Numpy_Array_Calculate
 print(a.x)
-Hyun.Numpy_Array_Sum(0)
-Hyun.Numpy_Array_Subtract(0)
-Hyun.Numpy_Array_Multiply(0)
-Hyun.Numpy_Array_Division(0)
+hyun.Numpy_Array_Sum(0)
+hyun.Numpy_Array_Subtract(0)
+hyun.Numpy_Array_Multiply(0)
+hyun.Numpy_Array_Division(0)
