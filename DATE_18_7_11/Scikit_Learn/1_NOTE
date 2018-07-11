@@ -1,0 +1,28 @@
+scikit-Learn 패키지의 전처리
+    Scikit-Learn 패키지에서 제공하는 전처리 기능은 4가지이며, preprocessing과 featuir_extraction 패캐지로 제공
+
+        스케일링(Scaling)
+        -주어진 데이터의 측정 단위에 따른 오차 극복
+
+        인코딩(Encoding)
+        -주어진 데이터에 대한 특징을 표현할 수 있도록 정수형으로 카테고리화 하기 위해 변환하는 기법
+
+        scikit-kearn 패키지의 전처리
+            min-max scaling
+                최대 값과 최소 값을 기준으로 척도를 조정하여 0과 1 사이의 결과 값을 갖는 scaling 기법
+            standard scaling
+                입력 데이터들에 대해 0을 중심으로 표준편차가 1인 정규 분포를 따르게 변화하는 기법을 정규 표준화 scaling 기법
+            on-hot encoding
+                주어진 데이터가 0에서 k-에 대해 0과 1의 값으로 구성되는 k 차원의 벡터를 변환
+                주어진 데이터의 카테고리에서 한 요소만 1의 값을 갖는 벡터를 만드는 과정
+                구분         이름                         설명
+                속성         n_values_                   각 특징당 분류할 수 있는 개수
+                            feature_indices_            입력 데이터가 벡터인 경우 각 원소를 나누기 위한 값
+                            active_features_            실제로 분류를 위해 사용되는 색인 값
+                메소드       fit(X[,y])                  X값에 대해 One hoe Encoder를 맞춤
+                                                        fit 이후 n_values_, feature_indices_, active_features_를 사용할 수 있음
+                            transform(X)                X를 One hot Encoding을 사용하여 변환함
+                            fit_transform(X[,y]0)       fit메소드 사용 후 transform 메소드를 사용하는 것과 같음
+
+                        
+
