@@ -36,6 +36,7 @@ class Hyun_Regression_Analysis:
         plt.title("Linear Regression with sckit_learn")
         plt.legend()
         plt.show()
+
 hyun = Hyun_Regression_Analysis
 hyun.Print(0)
 hyun.Draw_Grap(0)
