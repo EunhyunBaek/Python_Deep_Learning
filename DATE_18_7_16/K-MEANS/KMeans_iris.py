@@ -21,27 +21,30 @@ from sklearn.metrics import silhouette_score
 
 # np.random.seed(5)
 iris = datasets.load_iris()
-X_train=iris.data
-y_train=iris.target
-print('y_train :',y_train)
-estimators=[('K_Means 8',KMeans(n_clusters=8)),
-              ('K_Means 3',KMeans(n_clusters=3))]
+X_train = iris.data
+y_train = iris.target
+print('y_train : ', y_train)
 
+
+estimators = [('k_means_iris_8', KMeans(n_clusters=8)),
+              ('k_means_iris_3', KMeans(n_clusters=3))]
 
 fignum = 1
 titles = ['8 clusters', '3 clusters']
-#estimators = np.ndarray([])
+
 for name, est in estimators:
     fig = plt.figure(fignum, figsize=(4, 3))
     fig.set_tight_layout(False)
-
     ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
+#   학습 수행
     est.fit(X_train)
     labels = est.labels_
-    print(name,':',est.labels_)
-    #ax.scatter(X_train[:,3],X_train[:,0],X_train[:,2],c = labels.astype(np.float),edgecolor='k')
+
+    print(name, " ;", est.labels_)
+
     ax.scatter(X_train[:, 3], X_train[:, 0], X_train[:, 2],
                c=labels.astype(np.float), edgecolor='k')
+
     ax.w_xaxis.set_ticklabels([])
     ax.w_yaxis.set_ticklabels([])
     ax.w_zaxis.set_ticklabels([])
@@ -51,7 +54,10 @@ for name, est in estimators:
     ax.set_title(titles[fignum - 1])
     ax.dist = 12
     fignum = fignum + 1
-    print('Sihouette_score :',silhouette_score(X_train,est.labels_,metric='euclidean',sample_size=len(X_train)))
+    print("silhouette_score :", silhouette_score(X_train, est.labels_,
+                                                 metric='euclidean',
+                                                 sample_size=len(X_train)))
+
 # Plot the ground truth
 
 fig = plt.figure(fignum, figsize=(8, 6))
@@ -68,6 +74,7 @@ for name, label in [('Setosa', 0),
 
 # Reorder the labels to have colors matching the cluster results
 y = np.choose(y_train, [1, 2, 0]).astype(np.float)
+#ax.scatter(X_train[:, 3], X_train[:, 0], X_train[:, 2], c=y, edgecolor='k')
 ax.scatter(X_train[:, 3], X_train[:, 0], X_train[:, 2], c=y, edgecolor='k')
 
 ax.w_xaxis.set_ticklabels([])
@@ -79,7 +86,7 @@ ax.set_zlabel('Petal length') # 2
 ax.set_title('Ground Truth')
 ax.dist = 12
 
-#plt.show()
+plt.show()
 
 
 
