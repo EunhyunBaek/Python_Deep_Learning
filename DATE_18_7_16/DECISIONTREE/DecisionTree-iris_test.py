@@ -47,8 +47,13 @@ while max_depths <= 5 :
                                 class_names=iris.target_names, filled=True, rounded=True, special_characters=True)
 
     graph = pydotplus.graph_from_dot_data(dot_data)
-    #Image(graph.create_png)
+    '''
+    img = Image(graph.create_png)
+    imgplot = plt.imshow(img, aspect='equal')
+    plt.show(block=False)
+    '''
     graph.write_png('tree{0}.png'.format(max_depths))
+
 
 # 2차원 그래프 그리기 (150개 전체 데이터 기준 )
     resolution = 0.01
