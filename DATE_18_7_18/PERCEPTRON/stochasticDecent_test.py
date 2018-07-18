@@ -40,7 +40,7 @@ def sigmoid(z) :
 #
 def gradient_descent(x,y) :
     m, n = x.shape         # 100 , 3
-    w = 0
+    w = np.zeros([n,1])
     lr=0.01
     for _ in range(m) :  # 100 번
         z= np.dot(x,w)
