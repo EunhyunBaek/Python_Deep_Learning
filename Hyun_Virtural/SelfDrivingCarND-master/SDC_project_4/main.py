@@ -7,8 +7,8 @@ from threshold import gradient_combine, hls_combine, comb_result
 from finding_lines import Line, warp_image, find_LR_lines, draw_lane, print_road_status, print_road_map
 from skimage import exposure
 input_type = 'video' #'video' # 'image'
-#input_name = 'project_video.mp4' #'test_images/straight_lines1.jpg' # 'challenge_video.mp4'
-input_name = 'test_video.mp4' #'test_images/straight_lines1.jpg' # 'challenge_video.mp4'
+input_name = 'project_video.mp4' #'test_images/straight_lines1.jpg' # 'challenge_video.mp4'
+#input_name = 'challenge_video.mp4' #'test_images/straight_lines1.jpg' # 'challenge_video.mp4'
 
 left_line = Line()
 right_line = Line()
@@ -45,7 +45,7 @@ if __name__ == '__main__':
         # Drawing the lines back down onto the road
         color_result = cv2.warpPerspective(w_color_result, Minv, (c_cols, c_rows))
         comb_result = np.zeros_like(undist_img)
-        comb_result[220:rows - 22, 0:cols] = color_result
+        comb_result[220:rows - 12, 0:cols] = color_result
 
         # Combine the result with the original image
         result = cv2.addWeighted(undist_img, 1, comb_result, 0.3, 0)

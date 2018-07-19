@@ -390,7 +390,7 @@ def print_road_status(img, left_line, right_line):
 
 def print_road_map(image, left_line, right_line):
     """ print simple road map """
-    #img = cv2.imread('images/top_view_car.png', -1)
+    img = cv2.imread('images/top_view_car.png', -1)
     #img = cv2.resize(img, (120, 246))
 
     rows, cols = image.shape[:2]
