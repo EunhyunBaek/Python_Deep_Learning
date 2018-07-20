@@ -34,5 +34,5 @@ for rangeNum in range(100):
     sess.run(train,feed_dict={x:inputtrainData})
     print(rangeNum,sess.run(cost,feed_dict={x:inputtrainData}))
 y_hat=sess.run(hypothesis,feed_dict={x:[[1.,7.,2.],[1.,3.,7]]})
-print(y_hat)
+print("y_hat",y_hat)
 sess.close()

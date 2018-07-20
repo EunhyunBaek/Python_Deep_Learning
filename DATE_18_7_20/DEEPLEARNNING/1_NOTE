@@ -1,0 +1,45 @@
+다층 신경망의 한계
+    다수의 은닉층에 의한 성능 저하
+    오류 역전파 알고리즘 적용의 한계
+    다양한 머신 러닝 알고리즘 개발(svm등)등
+2000년 중반
+    Hinton(2006, A fast learning algorithm for
+    deep belief nets)과 Bengio(2007, Greedy
+    Layer-Wise Training for Deep Networks)는
+    논문
+    초기값 설정의 중요성 제시, 효율적인 학습 방안 증명
+    기존 다층 신경망과의 차별화를 위해 딥러닝으로 명함
+딥러닝의 핵심 기술
+    Gradient Vanishing 현상 해결
+        ReLu 함수를 통한 Gradient Vanishing 현상 극복
+    Overfitting 문제 해결
+        드롭 아웃(Drop Out)기법 적용
+    과도한 연산문제 해결
+        GPU(Graphic Processing Unit)을 기반으로 프로그래밍을 토한 병렬 컴퓨팅 구현을 통해
+        연산 속도를 획기적으로 높일 수 있게 됨
+
+    딥러닝의 활용 사례
+        음성 인식과 자연어 처리
+            애플의 시리, 구굴의 나우, ms의 코나타 등
+                퀘이트봇:la타임즈는 지진관련 정보를 자동으로 수집해 거의 실시간으로 지진 발생 기사를 만들어 속보 기사 작성
+                얼굴 인식 기술
+                    딥페이스:페이스북의 ai연구소에서는 딥러닝을 통한 얼굴 인식 알고리즘
+                            얼굴인식 정확도는 97.25%로 인간의 얼굴 인식 정확도인 97.53%와 거의 차이가 없을 정도로 정확
+    CNN(Convolution Neural Network)
+        Cnn
+            이미지를 인식하기 위한 대표적인 딥러닝 알고리즘
+            인공 신경망 앞에 여러 개의 컨볼루션 계층(Convolution Layer)과 폴링 계층(Pooling Layer)을 조합하여 만든 구조
+        Convolution Layer
+                CNN에서 입력된 이미지에 대한 특징을 추출하는 역할을 수행하느 ㄴ계층
+                3가지 연산을 통해 이미지의 특징을 추출
+                    Filter 연산
+                        원하는 특징을 검출해 주는 역할
+                    Stride 연산
+                        주어진 이미지에 특징 추출을 위한 필터를 어떻게 적용할 것인지에 대한 방법
+                    Padding 연산
+                        Filter 연산과 Stride 연산의 수행 결과 합성곱으 ㅣ크기가 작아지는 문제를 해결하기 위한 방법
+                -이 값을 당므 계층으로 전달하기 위하여 활성화 함수를 적용하는 구조로 구성
+
+
+--------------------
+colaboratory
