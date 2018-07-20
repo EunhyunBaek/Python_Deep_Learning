@@ -55,10 +55,10 @@ class Hyun_Train_GradientDescentOptimizer:
         #    print("x=", x_test[i], "predict:", sess.run(hypothesis, feed_dict={x: x_test}))
 
 hyun =Hyun_Train_GradientDescentOptimizer
-#sess=Hyun_Train_GradientDescentOptimizer.Init_Session(0)
-sess=tf.Session()
+sess=Hyun_Train_GradientDescentOptimizer.Init_Session(0)
+#sess=tf.Session()
 sess.run(tf.global_variables_initializer())
-###
+###################
 xTrainData = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 yTrainData = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -75,7 +75,6 @@ cost = tf.reduce_mean((hypothesis-yTrainData)**2)
 optimizer=tf.train.GradientDescentOptimizer(learning_rate=0.01)
 #학습 진행
 train=optimizer.minimize(loss=cost)
-sess= tf.Session()
 sess.run(tf.global_variables_initializer())
 #epoch를 10번 수행
 for i in range(10):
@@ -84,7 +83,6 @@ print("w:",sess.run(weight),"b:",sess.run(bias),"cost:",sess.run(cost))
 for i in range(len(xTestData)):
     print("x=",xTestData[i],"predict:",sess.run(weight*xTestData[i]+bias))
 sess.close()
-
-###
+###################
 #hyun.Show(100,sess)
 Hyun_Train_GradientDescentOptimizer.Close_Session(sess)
